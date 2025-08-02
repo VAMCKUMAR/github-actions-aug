@@ -5,7 +5,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     concurrency:
-      group: build-group
+      group: build-group-1
       cancel-in-progress: true
     steps:
       - run: echo "Building the app"
@@ -13,7 +13,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     concurrency:
-      group: test-group
+      group: test-group-1
       cancel-in-progress: true
     strategy:
       matrix:
